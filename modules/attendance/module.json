@@ -1,0 +1,1 @@
+{"id":"attendance","name":"Absensi","version":"1.0.0","description":"Absensi siswa dan pegawai berbasis RFID.","legacy_path":"absensi","source_path":"modules/attendance/app","entry":"absensi/sw-admin/","dependencies":["core"],"default_enabled":true,"package":"sds-module-attendance"}

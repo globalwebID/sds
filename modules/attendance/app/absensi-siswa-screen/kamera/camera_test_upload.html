@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<body>
+  <input type="file" id="f" accept="image/*">
+  <button id="btn">Upload Snapshot</button>
+  <pre id="out"></pre>
+
+<script>
+const URL = 'https://absensi.smkn1probolinggo.sch.id/absensi-siswa-screen/kamera/camera_upload.php';
+document.getElementById('btn').onclick = async () => {
+  const file = document.getElementById('f').files[0];
+  const fd = new FormData();
+  fd.append('device_id','CAM-001');
+  fd.append('token','TOKEN_RAHASIA_123');
+  if(file) fd.append('snapshot', file);
+
+  const res = await fetch(URL, {method:'POST', body: fd});
+  document.getElementById('out').textContent = await res.text();
+};
+</script>
+</body>
+</html>

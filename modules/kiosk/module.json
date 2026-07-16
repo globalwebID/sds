@@ -1,0 +1,1 @@
+{"id":"kiosk","name":"Anjungan","version":"1.0.0","description":"Anjungan informasi dan layanan mandiri sekolah.","legacy_path":"anjungan","source_path":"modules/kiosk/app","entry":"anjungan/","dependencies":["core"],"default_enabled":true,"package":"sds-module-kiosk"}

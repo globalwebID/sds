@@ -1,0 +1,15 @@
+[04-Feb-2026 20:38:57 Asia/Jakarta] PHP Fatal error:  Uncaught Error: Class "ZipArchive" not found in /home/wira6492/public_html/absensi.smkn1probolinggo.sch.id/sw-library/PhpSpreadsheet/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Xlsx.php:79
+Stack trace:
+#0 /home/wira6492/public_html/absensi.smkn1probolinggo.sch.id/sw-library/PhpSpreadsheet/phpoffice/phpspreadsheet/src/PhpSpreadsheet/IOFactory.php(134): PhpOffice\PhpSpreadsheet\Reader\Xlsx->canRead()
+#1 /home/wira6492/public_html/absensi.smkn1probolinggo.sch.id/sw-library/PhpSpreadsheet/phpoffice/phpspreadsheet/src/PhpSpreadsheet/IOFactory.php(84): PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile()
+#2 /home/wira6492/public_html/absensi.smkn1probolinggo.sch.id/sw-admin/sw-mod/user/sw-proses.php(423): PhpOffice\PhpSpreadsheet\IOFactory::load()
+#3 {main}
+  thrown in /home/wira6492/public_html/absensi.smkn1probolinggo.sch.id/sw-library/PhpSpreadsheet/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Xlsx.php on line 79
+
+[2026-02-04T20:38:57+07:00] FATAL: Uncaught Error: Class "ZipArchive" not found in /home/wira6492/public_html/absensi.smkn1probolinggo.sch.id/sw-library/PhpSpreadsheet/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Xlsx.php:79
+Stack trace:
+#0 /home/wira6492/public_html/absensi.smkn1probolinggo.sch.id/sw-library/PhpSpreadsheet/phpoffice/phpspreadsheet/src/PhpSpreadsheet/IOFactory.php(134): PhpOffice\PhpSpreadsheet\Reader\Xlsx->canRead()
+#1 /home/wira6492/public_html/absensi.smkn1probolinggo.sch.id/sw-library/PhpSpreadsheet/phpoffice/phpspreadsheet/src/PhpSpreadsheet/IOFactory.php(84): PhpOffice\PhpSpreadsheet\IOFactory::createReaderForFile()
+#2 /home/wira6492/public_html/absensi.smkn1probolinggo.sch.id/sw-admin/sw-mod/user/sw-proses.php(423): PhpOffice\PhpSpreadsheet\IOFactory::load()
+#3 {main}
+  thrown in /home/wira6492/public_html/absensi.smkn1probolinggo.sch.id/sw-library/PhpSpreadsheet/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Reader/Xlsx.php:79

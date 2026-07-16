@@ -1,0 +1,3 @@
+SDS E-Perpustakaan v2.4.0
+Data Massal, Export Excel, OPAC Publik + Query Anggota Stabil
+Build: 2026-07-14

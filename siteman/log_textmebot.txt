@@ -1,0 +1,18 @@
+[2025-06-13 21:31:14]
+To: 6282257618033
+Message: Hallo orang tua dari Puti Gawati Prakasa, S.Kep, putra/putri Anda saat ini mengikuti kegiatan ekstrakurikuler OSIS.
+Response: 
+Recipient's Phone number: <b>+6282257618033</b><br>Sender's phone number: <b>+6285855858715</b><br><br>Sending Text message...<br>Result: <b>Success!</b>
+
+[2025-06-13 21:35:08]
+To: 628155509011
+Message: Hallo orang tua dari <strong>Ana Nasyiah, S.H.</strong>, putra/putri Anda saat ini <strong>tidak mengikuti kegiatan karena Izin</strong> ekstrakurikuler <strong>Palang Merah Remaja</strong>.
+Response: 
+Recipient's Phone number: <b>+628155509011</b><br>Sender's phone number: <b>+6285855858715</b><br><br>Sending Text message...<br>Result: <b>Success!</b>
+
+[2025-06-13 21:35:09]
+To: 6282257618033
+Message: Hallo orang tua dari <strong>Puti Gawati Prakasa, S.Kep</strong>, putra/putri Anda saat ini <strong>tidak mengikuti kegiatan karena Izin</strong> ekstrakurikuler <strong>Palang Merah Remaja</strong>.
+Response: 
+<p><b>ERROR: There is currently a limit of 1 messages per 5 seconds to prevent a ban from whatsapp.<br><br>Please add a delay between messages sent. For example, you can group them into one message or create a queue and send them every 8 seconds. <br><br>If you are sure about your code and wants to bypass this restrictions, please contact support@textmebot.com for help.</b>
+

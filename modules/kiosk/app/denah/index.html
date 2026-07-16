@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Asisten Virtual SMKN 1 Probolinggo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #eef2f3;
+      text-align: center;
+      padding-top: 40px;
+    }
+
+    #bot-video {
+      width: 50%;
+      height: auto;
+      border-radius: 10px;
+      background: #000;
+    }
+
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>🎤 Asisten Virtual SMKN 1 Probolinggo</h2>
+
+  <!-- Video Bot -->
+  <video id="bot-video" controls playsinline poster="bot_idle.png"></video>
+
+  <!-- Output & Tombol -->
+  <div id="output">Klik tombol lalu bicara...</div>
+  <button id="speak-btn">🎙️ Bicara</button>
+
+  <script>
+    const video = document.getElementById("bot-video");
+    const output = document.getElementById("output");
+    const speakBtn = document.getElementById("speak-btn");
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+      alert("Browser Anda tidak mendukung Speech Recognition. Gunakan Google Chrome.");
+      speakBtn.disabled = true;
+    }
+
+    speakBtn.addEventListener("click", startSpeechRecognition);
+
+    function startSpeechRecognition() {
+      const recognition = new SpeechRecognition();
+      recognition.lang = "id-ID";
+      recognition.start();
+
+      recognition.onresult = (event) => {
+        const userText = event.results[0][0].transcript;
+        output.innerHTML = `🗣️ Anda: ${userText}`;
+        fetchBotResponse(userText);
+      };
+
+      recognition.onerror = (event) => {
+        output.innerHTML = `❌ Terjadi kesalahan: ${event.error}`;
+      };
+    }
+
+    function fetchBotResponse(userText) {
+      fetch(`logic.php?pesan=${encodeURIComponent(userText)}`)
+        .then(res => res.text())
+        .then(botText => {
+          output.innerHTML += `<br>🤖 Bot: ${botText}`;
+          requestDIDVideo(botText);
+        })
+        .catch(err => {
+          console.error("Gagal mengambil respons:", err);
+          output.innerHTML += "<br>⚠️ Gagal mengambil respons dari server.";
+        });
+    }
+
+    function requestDIDVideo(text) {
+      output.innerHTML += "<br>🎬 Membuat video dari D-ID...";
+      fetch("generate_did_video.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: text })
+      })
+        .then(res => res.json())
+        .then(data => {
+          if (data.video_url) {
+            video.src = data.video_url;
+            video.play();
+            output.innerHTML += "<br>✅ Video diputar.";
+          } else {
+            output.innerHTML += "<br>❌ Gagal mendapatkan video.";
+          }
+        })
+        .catch(err => {
+          console.error("Gagal video D-ID:", err);
+          output.innerHTML += "<br>❌ Gagal menghubungi D-ID.";
+        });
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+/* Scrollbar minimalis dan tipis */
+.tab-sidebar::-webkit-scrollbar,
+.tab-content-container::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.tab-sidebar::-webkit-scrollbar-track,
+.tab-content-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.tab-sidebar::-webkit-scrollbar-thumb,
+.tab-content-container::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 3px;
+}
+
+/* Firefox */
+.tab-sidebar,
+.tab-content-container {
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 transparent;
+}
+
+.tab-wrapper {
+    display: flex;
+    height: 80vh;
+    /* Sesuaikan dengan tinggi yang diinginkan */
+    overflow: hidden;
+}
+
+.tab-sidebar {
+    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
+    overflow-y: scroll;
+    /* selalu ada scrollbar */
+    border-right: 1px solid #dee2e6;
+}
+
+
+.tab-content-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    /* padding-left: 15px; */
+}
+
+/* Optional: Biarkan tab-content tinggi penuh */
+.tab-content>.tab-pane {
+    min-height: 100%;
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<body>
+  <button id="btn">Kirim Heartbeat</button>
+  <pre id="out"></pre>
+
+<script>
+document.getElementById('btn').onclick = async () => {
+  const fd = new FormData();
+  fd.append('device_id', 'CAM-001');      // ganti sesuai device_id di tabel cameras
+  fd.append('token', 'TOKEN_RAHASIA_123'); // ganti sesuai token di tabel cameras
+
+  const res = await fetch('https://absensi.smkn1probolinggo.sch.id/absensi-siswa-screen/kamera/camera_upload.php', {
+    method: 'POST',
+    body: fd
+  });
+  document.getElementById('out').textContent = await res.text();
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font: 16px / 1.8 Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 300;
+    color: #575757;
+}
+
+.grid-container {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main .grid-container,
+header .grid-container,
+.nav > div,
+footer > div {
+    max-width: 1200px;
+}
+
+.nav {
+    height: 30px;
+    background: #3D3D3D;
+    padding: 0;
+    position: relative;
+}
+@media (max-width: 900px) {
+    .nav {
+        text-align: center;
+    }
+}
+
+.nav > .grid-container {
+    display: flex;
+}
+.nav ul {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding-left: 0;
+}
+.nav ul li,
+.nav ul li a {
+    display: inline-block;
+}
+@media (max-width: 900px) {
+    .nav ul {
+        width: auto;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        float: none;
+    }
+}
+.nav ul.nav-left {
+    text-align: left;
+    width: 70%;
+}
+@media (max-width: 900px) {
+    .nav ul.nav-left {
+        padding-right: 0;
+    }
+}
+.nav ul.nav-right {
+    text-align: right;
+    width: 30%;
+}
+@media (max-width: 900px) {
+    .nav ul.nav-right {
+        padding-left: 23px;
+    }
+}
+.nav ul li + li {
+    margin-left: 23px;
+}
+.nav ul li a {
+    font-size: 10px;
+    font-size: 0.625rem;
+    line-height: 18px;
+    line-height: 1.13rem;
+    line-height: 30px;
+    float: left;
+    color: #ddd;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.nav ul li a:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.header-logo img {
+    width: 64px;
+}
+
+header > .grid-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.header-logo {
+    width: 30%;
+}
+
+.header-logo > a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-logo > a > span{
+    color: initial;
+    margin-left: 10px;
+}
+
+.header-right {
+    width: 70%;
+    text-align: right;
+}
+
+.header-right > a{
+    text-align: right;
+    border: 2px solid #305dff;
+    border-radius: 6px;
+    text-decoration: none;
+    padding: 8px 20px;
+    color: initial;
+    font-size: 20px;
+}
+
+.header-right > a:hover, .header-right > a:focus, .header-right > a:active {
+    color: #ffffff;
+    background-color: #305dff;
+}
+
+.switch {
+    margin:20px auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+.switch > a {
+    color: initial;
+}
+
+.footer {
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 23.4px;
+    line-height: 1.46rem;
+    padding-top: 2.25em;
+    padding-bottom: 2.25em;
+    overflow: hidden;
+    color: #8a8a8a;
+}
+.footer a {
+    color: #0287D0;
+    text-decoration: none;
+    border-bottom: 1px dotted #0287D0;
+}
+.footer a:hover {
+    color: #0277b7;
+}
+.footer p {
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}

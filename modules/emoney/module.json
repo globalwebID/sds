@@ -1,0 +1,1 @@
+{"id":"emoney","name":"E-Money","version":"1.0.0","description":"Saldo kartu pelajar, top up, dan riwayat transaksi.","legacy_path":"emoney","source_path":"modules/emoney/app","entry":"emoney/","dependencies":["core"],"default_enabled":true,"package":"sds-module-emoney"}

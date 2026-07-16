@@ -1,0 +1,1 @@
+{"id":"library","name":"Perpustakaan","version":"2.6.0","description":"Katalog, anggota, sirkulasi, OPAC, laporan, dan audit.","legacy_path":"perpustakaan","source_path":"modules/library/app","entry":"perpustakaan/","dependencies":["core"],"default_enabled":true,"package":"sds-module-library"}

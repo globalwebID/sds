@@ -1,0 +1,36 @@
+RewriteEngine On
+
+RewriteRule ^login/?$ index.php?page=login [L,QSA]
+RewriteRule ^login_process/?$ index.php?page=login_process [L,QSA]
+RewriteRule ^dashboard/?$ index.php?page=dashboard [L,QSA]
+RewriteRule ^jurusan/?$ index.php?page=jurusan [L,QSA]
+RewriteRule ^jurusan_tambah/?$ index.php?page=jurusan_tambah [L,QSA]
+RewriteRule ^kuota_kelas/?$ index.php?page=kuota_kelas [L,QSA]
+RewriteRule ^ekskul/?$ index.php?page=ekskul [L,QSA]
+RewriteRule ^ekskul_tambah_siswa/?$ index.php?page=ekskul_tambah_siswa [L,QSA]
+RewriteRule ^ekskul_lihat_siswa/?$ index.php?page=ekskul_lihat_siswa [L,QSA]
+RewriteRule ^ekskul_hapus_siswa/?$ index.php?page=ekskul_hapus_siswa [L,QSA]
+RewriteRule ^students/?$ index.php?page=students [L,QSA]
+RewriteRule ^students_rfid/?$ index.php?page=students_rfid [L,QSA]
+RewriteRule ^pengaturan/?$ index.php?page=pengaturan [L,QSA]
+RewriteRule ^pengaturan_simpan/?$ index.php?page=pengaturan_simpan [L,QSA]
+RewriteRule ^anjungan/?$ index.php?page=anjungan [L,QSA]
+RewriteRule ^log_aktivitas/?$ index.php?page=log_aktivitas [L,QSA]
+RewriteRule ^log_update/?$ index.php?page=log_update [L,QSA]
+
+# Alihkan ekskul_tambah_siswa/5 ke ekskul_tambah_siswa.php?id=5
+RewriteRule ^ekskul_tambah_siswa/([0-9]+)$ ekskul_tambah_siswa.php?id=$1 [L]
+
+# Fallback umum (jika tidak cocok)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?page=$1 [L,QSA]
+
+# Menyembunyikan ekstensi .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Redirect .php ke tanpa ekstensi (opsional)
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.php\ HTTP/
+#RewriteRule ^(.+)\.php$ /$1 [R=301,L]

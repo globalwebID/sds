@@ -1,0 +1,371 @@
+
+.webcame-recognition{
+  position: relative;
+  text-align: center;
+  width:500px;
+  display: inline-block;
+  vertical-align: baseline;
+  overflow: hidden;
+}
+
+.webcame-recognition .video-recognition{
+  position: relative;
+}
+
+.webcame-recognition .vidDisplay{
+  position: relative;
+  width:100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: baseline;
+  border-radius:10px;
+  transform: scaleX(-1);
+  min-height:350px;
+}
+
+.webcame-recognition canvas#overlay{
+  width: 100%;
+}
+
+.webcame-recognition .overlay-recognition { 
+    position: absolute; 
+    top:50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    width: 250px; 
+    height: 300px; 
+    border:5px double;
+    border-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    pointer-events: none;
+    border-radius:20px;
+    opacity:0.8;
+}
+
+.webcame-recognition .overlay-recognition.error{
+  border-color: #ff0052;
+}
+
+.webcame-recognition .overlay-recognition.success{
+  border-color: #4BD763;
+}
+
+.webcame-recognition .overlay-recognition .result-label{
+  width: 90%;
+  padding: 3px 2px;
+  background-color:#ffffff;
+  position: absolute;
+  bottom: -0px;
+  border-radius: 10px 10px 0px 0px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 20px;
+  color: #111111;
+}
+
+.webcame-recognition .overlay-recognition .result-label.error{
+  background-color: #ff0052;
+  color:#ffffff;
+}
+
+.webcame-recognition .overlay-recognition .result-label.success{
+  background-color: #4BD763;
+  color:#ffffff;
+}
+
+.webcame-recognition .overlay-recognition .result-label-top{
+  width: 90%;
+  padding: 3px 2px;
+  position: absolute;
+  top:10px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+
+.resume-capture-face-api{
+  position: absolute;
+  top:10px;
+  right: 10px;
+  width:120px;
+  height:130px;
+  border-radius:10px;
+  overflow: hidden;
+  border:solid 3px #eeeeee;
+  display: none;
+  box-shadow: 16px 14px 20px #0000008c;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-capture-face-api::before{
+  content: "";
+  background-image: conic-gradient(
+      #ff0052 20deg,
+      transparent 120deg
+  );
+  width: 160%;
+  height: 160%;
+  position: absolute;
+  animation: rotate 2s linear infinite;
+  opacity: 0.4;
+}
+
+@keyframes rotate {
+  0%{
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(-360deg);
+  }
+}
+
+.resume-capture-face-api img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+
+.loading-webcame{
+  position: absolute;
+  background: #ffffff!important;
+  padding: 20px 5px;
+  color: #111111!important;
+  margin: auto;
+  top: 40%;
+  width:90%;
+  transform: translateY(-40%);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 999999;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+/** Webcame Biasa */
+
+.webcam-app {
+  width: 600px;
+  height: auto;
+  text-align: center;
+  display: inline-block;
+}
+
+.body-webcame{
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  border-radius:10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+#webcam{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  margin: auto;
+}
+
+
+#canvas {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  border-radius: 10px;
+  z-index: 0!important;
+}
+
+  
+.Controls-camera {
+  position: relative;
+  margin-top:-20px;
+}
+
+.Controls-camera button{
+  margin-right: 25px;
+  border-radius:30px;
+  font-size: 15px;
+}
+
+.flash{ 
+  position:fixed; 
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#fff;
+  z-index: 999999;
+}
+
+#map-overlay {
+  position: absolute;
+  top: 10px;
+  left:8px;
+  width: 130px;
+  height: 80px;
+  z-index:999999;
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.shift-overlay {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  width: 130px;
+  height: 80px;
+  z-index:999999;
+  border-radius: 8px;
+  overflow: hidden;
+  background:#000000;
+  background-color: rgba(0, 0, 0, 0.42);
+  padding: 3px;
+}
+
+.shift-overlay ul{
+  margin: 0;
+  padding: 0px;
+}
+
+.shift-overlay ul li{
+  text-align: left;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  color:#ffffff;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.camera-flash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  .camera-flash.active {
+    animation: flash 0.3s ease-in-out;
+  }
+
+  @keyframes flash {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+@media only screen and (max-width: 680px) {
+  .Controls-camera {
+    position: relative;
+    margin-top:-20px;
+  }
+  .Controls-camera button{
+    margin-right: 10px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .wallet-card-custom {
+    padding: 0px;
+    position: absolute;
+    right: 0px;
+    width: 100%;
+  }
+
+  .form-control.webcam-start{
+    width: 300px;
+  }
+
+  /** Webcame Recongnition */
+  .webcame-recognition{
+    position: relative;
+    width:100%!important;
+    height:100%;
+  }
+
+  .webcame-recognition .video-recognition{
+    position: relative;
+    width:100%;
+    height: 355px;
+  }
+
+
+  .webcame-recognition .overlay-recognition{
+    width: 250px;
+    height: 300px;
+    border:5px double;
+    border-radius:20px;
+    opacity:0.8;
+    margin: auto;
+    border-color: #FFFFFF;
+  }
+
+  .webcame-recognition .vidDisplay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    object-fit: cover; /* atau contain, tergantung kebutuhan */
+    background-color: black; /* fallback */
+  }
+
+
+  .resume-capture-face-api{
+    top: 5px;
+    right: 5px;
+    width: 60px;
+    height: 70px;
+  }
+
+  /* Webcame*/
+  #webcam {
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    background-color: black;
+    display: block;
+    border-radius: 10px;
+    background: black;
+    z-index: 0;
+    min-height: 350px;
+  }
+
+  .Controls-camera {
+    position: relative;
+    margin-top:-20px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  .webcame-recognition .loading-webcame{
+    width: 100%;
+  }
+}

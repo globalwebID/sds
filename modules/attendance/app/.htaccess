@@ -1,0 +1,57 @@
+RewriteEngine On
+RewriteRule ^.well-known(.*)$ - [L,NC]
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+Options -Indexes
+
+RewriteRule ^404?$ 404.php [L]
+RewriteRule ^logout?$ sw-library/logout.php
+
+#---------------- Page ----------------------------
+RewriteRule ^oauth/google?$ google/index.php [L]
+RewriteRule ^absensi-siswa-screen/?$ absensi-siswa-screen/index.php [L]
+RewriteRule ^new-absensi-siswa-screen/?$ new-absensi-siswa-screen/index.php [L]
+RewriteRule ^absensi-pegawai-screen/?$ absensi-pegawai-screen/index.php [L]
+
+# --------- PRINT SISWA -----------
+RewriteRule ^siswa-print-izin?$ siswa/module/izin/print.php [L]
+RewriteRule ^siswa-print-absensi?$ siswa/module/histori-absen/print.php [L]
+RewriteRule ^siswa-print-idcard?$ siswa/module/kartu-nama/print.php [L]
+RewriteRule ^siswa-print-ekbm?$ siswa/module/rekap-absen-ekbm/print.php [L]
+
+# --------- PRINT PEGAWAI -----------
+RewriteRule ^pegawai-print-izin?$ pegawai/module/izin/print.php [L]
+RewriteRule ^pegawai-print-absensi?$ pegawai/module/histori-absen/print.php [L]
+RewriteRule ^pegawai-print-idcard?$ pegawai/module/kartu-nama/print.php [L]
+RewriteRule ^print-rekap-absen-siswa?$ pegawai/module/rekap-absen-siswa/print.php [L]
+RewriteRule ^print-rekap-absen-ekbm?$ pegawai/module/rekap-absen-ekbm/print.php [L]
+RewriteRule ^print-izin-siswa?$ pegawai/module/izin-siswa/print.php [L]
+RewriteRule ^print-pelanggaran?$ pegawai/module/pelanggaran/print.php [L]
+RewriteRule ^pegawai-print-sanksi?$ pegawai/module/sanksi-pelanggaran/print.php [L]
+
+# --------- PRINT WALI MURID -----------
+RewriteRule ^wali-murid-print-izin?$ wali-murid/module/izin/print.php [L]
+RewriteRule ^wali-murid-print-absensi?$ wali-murid/module/histori-absen/print.php [L]
+RewriteRule ^wali-murid-print-ekbm?$ wali-murid/module/rekap-absen-ekbm/print.php [L]
+RewriteRule ^wali-murid-print-idcard?$ wali-murid/module/kartu-nama/print.php [L]
+
+# --------- Akses Publik ---------------
+RewriteRule ^print-sanksi?$ pegawai/module/sanksi-pelanggaran/print-surat.php [L]
+
+# ----------- Blog Details ----------------------
+#RewriteRule ^blog-([^/]*)?$ index.php?mod=blog-details&details=$1 [L]
+
+
+
+# ----------- Index + halaman ---------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)?$ index.php?mod=$1 [L]
+
+<FilesMatch "\.(text)$">
+  php_flag engine off
+</FilesMatch>
+
+</IfModule>

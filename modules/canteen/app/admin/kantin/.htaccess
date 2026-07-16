@@ -1,0 +1,18 @@
+# 🔒 Nonaktifkan Directory Listing
+Options -Indexes
+
+# ✅ Redirect otomatis jika buka folder langsung
+DirectoryIndex dashboard.php index.php
+
+# 🚫 Blok akses langsung ke file sensitif
+<FilesMatch "\.(htaccess|env|sql|ini|log|sh|bak|php~)$">
+    Require all denied
+</FilesMatch>
+
+# 🌐 Tambahan keamanan: Blok akses ke file config
+<Files "config.php">
+    Require all denied
+</Files>
+
+# ✅ Cegah akses langsung ke file PHP jika tidak login (opsional jika sudah pakai validasi di tiap file)
+# (Ini hanya bisa jalan kalau kamu pakai sistem route atau MVC, jadi bisa dilewati)

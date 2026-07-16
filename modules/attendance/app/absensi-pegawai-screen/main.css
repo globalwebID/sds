@@ -1,0 +1,332 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ededed;
+    height: 100%;
+    background-size: 100%;
+    background-attachment: fixed;
+  }
+
+  @keyframes slide {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+h1{
+    font-size:25px;
+}
+
+h3{
+    font-size: 18px;
+}
+
+
+
+.header{
+    background:#ffffff;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.header.active{
+    background:#ffffff;
+    
+}
+
+.logo-header{
+    position: relative;
+    text-align: center;
+}
+
+.logo-header img{
+   max-height:40px;
+   width:auto;
+}
+
+.main{
+    background: url(../template/img/14904171_Blue_background.jpg) bottom no-repeat, #eeeeee;
+    background-size: cover;
+}
+
+.screen-slider{
+    position:relative;
+    height:230px;
+    border-radius:10px;
+    overflow: hidden;
+    text-align:center;
+    overflow: hidden;
+}
+
+.screen-slider img{
+    height:230px;
+    width:100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
+.clock, .kalender{
+    font-size:16px;
+    line-height:39px;
+}
+
+.webcam-screen {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    z-index: -1;
+    /* Posisi tengah */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.aniamed-scanner{
+    position: relative;
+    height:260px;
+    width: auto;
+    background:#ffffff;
+}
+.imaged-scanner{
+    height:260px;
+    width: auto;
+    object-fit: cover;
+}
+
+.qrcode{
+    font-size:20px!important;
+    border-radius:30px!important;
+    border:0px!important;
+    opacity: 0;
+}
+
+.qrcode:active,
+.qrcode:focus{
+    border:0px!important;
+}
+
+.qrcode::-ms-input-placeholder {
+    color: #ffffff!important;
+}
+
+::placeholder {
+    color: #ffffff!important;
+}
+
+.table-kelas {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.data-absensi-kelas hr{
+    margin-top:5px;
+    margin-bottom:5px;
+    border: 0;
+    height: 0px;
+    border-top: 1px solid #ffffff;
+}
+
+.table-kelas hr{
+    border: 0;
+    height: 0px;
+    border-top: 0px;
+}
+
+
+.marquee-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.marquee {
+    top: 1em;
+    position: relative;
+    box-sizing: border-box;  
+    animation: marquee 10s linear 0s infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(2, 2);
+    }
+    100% {
+        transform: translate(0, -100%);
+    }
+}
+
+
+img.avatar-absen{
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+    border-radius:20px;
+}
+
+h1.nama-siswa{
+    font-size: 25px;
+}
+
+.card-body-absensi{
+    min-height: 480px;
+}
+
+
+/* Styling untuk footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffffba;
+    color: #111111;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+/* Efek teks berjalan */
+.marquee-left {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee-left p {
+    display: inline-block;
+    animation: scroll-left 20s linear infinite;
+    font-size: 18px;
+}
+
+/* Animasi untuk teks berjalan ke kiri */
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-120%);
+    }
+}
+
+
+@media only screen and (min-width:768px) and (max-width: 992px) {
+    .screen-slider {
+        height:100px;
+    }
+    .screen-slider img{
+        height:100px;
+    }
+
+    .aniamed-scanner {
+        height:100px;
+    }
+    .imaged-scanner {
+       width: auto;
+        height: 100%
+    }
+    .avatar.avatar-50 {
+        height: 30px;
+        line-height:30px;
+        width: 30px;
+    }
+
+    .transactions .text-white{
+        font-size: 12px;
+    }
+
+    h3 {
+        font-size:14px;
+    }
+
+    .card-body-absensi{
+        min-height: 300px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .screen-slider {
+        height:200px;
+    }
+    .screen-slider img{
+        height:200px;
+    }
+
+    .aniamed-scanner {
+        height: 200px;
+    }
+    .imaged-scanner {
+        height: 200px;
+    }
+
+    .card-body-absensi{
+        min-height: 450px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1080px) {
+    .card-body-absensi{
+        min-height:560px;
+    }
+}
+
+@media only screen and (min-width:1900px){
+    .card-body-absensi{
+        min-height:560px;
+    }
+}
+
+
+@media all and (display-mode: fullscreen) and (min-width:1260px) {
+    .screen-slider {
+        height:300px;
+    }
+    .screen-slider img{
+        height:300px;
+    }
+
+    .aniamed-scanner {
+        height: 280px;
+    }
+    .imaged-scanner {
+        height: 280px;
+    }
+
+    .card-body-absensi{
+        min-height:750px;
+    }
+}
+
+
+@media all and (display-mode: fullscreen) and (min-width:1900px) {
+    .screen-slider {
+        height:300px;
+    }
+    .screen-slider img{
+        height:300px;
+    }
+
+    .aniamed-scanner {
+        height: 280px;
+    }
+    .imaged-scanner {
+        height: 280px;
+    }
+
+    .card-body-absensi{
+        min-height:700px;
+    }
+}

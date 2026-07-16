@@ -1,0 +1,1 @@
+{"id":"core","name":"SDS Core","version":"3.0.0-dev","description":"Data sekolah, siswa, pegawai, rombel, akun, pengaturan, audit, dan backup.","legacy_path":"siteman","entry":"siteman/dashboard","dependencies":[],"default_enabled":true,"required":true,"package":"sds-core"}

@@ -1,0 +1,1 @@
+{"id":"canteen","name":"Kantin","version":"1.0.0","description":"Transaksi kantin dan pengelolaan penjual.","legacy_path":"mkantin","source_path":"modules/canteen/app","entry":"mkantin/admin/login.php","dependencies":["core","emoney"],"default_enabled":true,"package":"sds-module-canteen"}

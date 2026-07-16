@@ -1,0 +1,7 @@
+# Blokir skrip di folder konten; aset statis tetap dapat dibaca.
+<FilesMatch "\.(?:php[0-9]?|phtml|phar)$">
+    Require all denied
+</FilesMatch>
+
+RemoveHandler .php .php3 .php4 .php5 .php7 .php8 .phtml .phar
+RemoveType .php .php3 .php4 .php5 .php7 .php8 .phtml .phar

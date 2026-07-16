@@ -1,0 +1,1 @@
+{"id":"enrollment","name":"Pendaftaran Peserta Didik","version":"1.0.0","description":"Formulir, unggahan berkas, pemetaan alamat, progres, dan dokumen daftar ulang.","source_path":"modules/enrollment/app","entry":"formulir","dependencies":["core"],"default_enabled":true,"required":true,"package":"sds-core"}

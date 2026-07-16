@@ -1,0 +1,340 @@
+/* ===============================
+   SUPER APP SISWA - APP.CSS
+   SMK Negeri 1 ProBOLINGGO
+================================ */
+
+:root{
+  --primary:#e11d48;
+  --secondary:#9ca34c;
+  --dark:#111827;
+  --bg:#f4f6f8;
+  --card:#ffffff;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:'Segoe UI',Arial,sans-serif;
+}
+
+body{
+  background:var(--bg);
+  min-height:100vh;
+  color:#111;
+  margin-bottom: 100px;
+}
+.hide {
+    display:none;
+}
+/* ===============================
+   HEADER
+================================ */
+.top{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:#fff;
+  padding:20px;
+  border-radius:0 0 20px 20px;
+}
+
+.top h1{
+  font-size:22px;
+  margin-bottom:4px;
+}
+
+.top small{
+  opacity:.9;
+  font-size:14px;
+}
+
+/* ===============================
+   SALDO CARD
+================================ */
+.saldo{
+  background:var(--card);
+  margin:12px;
+  padding:20px;
+  border-radius:16px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  text-align:center;
+}
+
+.saldo span{
+  display:block;
+  font-size:14px;
+  color:#6b7280;
+}
+
+.saldo strong{
+  font-size:26px;
+  /*color:var(--primary);*/
+  color:green;
+}
+
+.chip{
+  border:1px solid #e5e7eb;
+  background:#fff;
+  padding:8px 12px;
+  border-radius:999px;
+  font-weight:900;
+  font-size:12px;
+  cursor:pointer;
+}
+.chip.active{
+  background:#e11d48;
+  border-color:#e11d48;
+  color:#fff;
+}
+
+
+/* ===============================
+   MENU GRID
+================================ */
+.menu{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin:12px;
+}
+
+.menu a{
+  background:var(--card);
+  border-radius:16px;
+  padding:20px 10px;
+  text-align:center;
+  text-decoration:none;
+  color:#111;
+  box-shadow:0 6px 20px rgba(0,0,0,.07);
+  transition:.15s ease;
+}
+
+.menu a:hover{
+  transform:translateY(-3px);
+}
+
+.menu a span{
+  display:block;
+  margin-top:8px;
+  font-size:14px;
+}
+
+.menu a i{
+  font-size:28px;
+}
+
+/* ===============================
+   CARD UMUM
+================================ */
+.card{
+  background:var(--card);
+  margin:20px;
+  padding:20px;
+  border-radius:16px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.card h2{
+  font-size:18px;
+  margin-bottom:15px;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+.btn{
+  display:block;
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.btn-primary{
+  background:var(--primary);
+  color:#fff;
+}
+
+.btn-dark{
+  background:var(--dark);
+  color:#fff;
+}
+
+.btn-logout{
+    border-radius: 0;
+    color: #fff;
+    background: red;
+    position: fixed;
+    bottom: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* ===============================
+   LIST
+================================ */
+.list{
+  list-style:none;
+}
+
+.list li{
+  padding:14px 10px;
+  border-bottom:1px solid #eee;
+}
+
+.list li:last-child{
+  border-bottom:none;
+}
+
+/* ===============================
+   BOTTOM NAV (OPSIONAL)
+================================ */
+.bottom-nav{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  background:#fff;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+  box-shadow:0 -4px 15px rgba(0,0,0,.1);
+}
+
+.bottom-nav a{
+  text-decoration:none;
+  color:#6b7280;
+  font-size:12px;
+  text-align:center;
+}
+
+.bottom-nav a.active{
+  color:var(--primary);
+}
+
+.bottom-nav i{
+  font-size:20px;
+}
+
+/* CARD ABSENSI */
+.card-transaksi {
+  background: #fff;
+  margin: 10px 5px;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Biar di mobile kolom bisa turun */
+}
+
+.card-transaksi .info {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 60%; /* Ambil 60% lebar di mobile */
+  min-width: 120px;
+}
+
+.card-transaksi .info strong {
+  font-size: 14px;
+}
+
+.card-transaksi .info small {
+  font-size: 12px;
+  color: #888;
+}
+
+.card-transaksi div[class^="status-"] {
+  flex: 0 0 auto;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* WARNA STATUS */
+.status-hadir { background: #d1fae5; color: #065f46; }
+.status-absen { background: #fee2e2; color: #b91c1c; }
+.status-terlambat { background: #fef3c7; color: #b45309; }
+
+/* FILTER FORM RESPONSIVE */
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 10px 20px 10px;
+}
+
+.filter-form input {
+  flex: 1 1 45%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.filter-form button {
+  flex: 1 1 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #e11d48;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* HEADER */
+header.top {
+  padding: 15px 10px;
+  background: linear-gradient(135deg, #e11d48, #9ca34c);
+  color: #fff;
+  text-align: center;
+}
+
+/* CARD */
+.card {
+  margin: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* BOTTOM NAV FIXED */
+.bottom-nav a {
+  flex: 1 1 20%;
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+/* MOBILE MEDIA QUERY */
+@media (max-width: 480px) {
+  .card-transaksi .info {
+    flex: 1 1 100%;
+  }
+  .filter-form input {
+    flex: 1 1 100%;
+  }
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media(min-width:768px){
+  .menu{
+    max-width:600px;
+    margin:30px auto;
+  }
+  .saldo{
+    max-width:600px;
+    margin: 0px;
+  }
+}
